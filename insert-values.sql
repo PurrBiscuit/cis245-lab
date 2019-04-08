@@ -3,6 +3,8 @@ since they are parent tables to several other tables */
 
 DECLARE @Alabama uniqueidentifier;
 DECLARE @California uniqueidentifier;
+DECLARE @Florida uniqueidentifier;
+DECLARE @Georgia uniqueidentifier;
 DECLARE @Hesse uniqueidentifier;
 DECLARE @Illinois uniqueidentifier;
 DECLARE @Indiana uniqueidentifier;
@@ -12,9 +14,12 @@ DECLARE @NewYork uniqueidentifier;
 DECLARE @Oklahoma uniqueidentifier;
 DECLARE @Pennsylvania uniqueidentifier;
 DECLARE @Texas uniqueidentifier;
+DECLARE @Virginia uniqueidentifier;
 
 SELECT @Alabama = NewID();
 SELECT @California = NewID();
+SELECT @Florida = NewID();
+SELECT @Georgia = NewID();
 SELECT @Hesse = NewID();
 SELECT @Illinois = NewID();
 SELECT @Indiana = NewID();
@@ -24,6 +29,7 @@ SELECT @NewYork = NewID();
 SELECT @Oklahoma = NewID();
 SELECT @Pennsylvania = NewID();
 SELECT @Texas = NewID();
+SELECT @Virginia = NewID();
 
 INSERT INTO LOOKUP_STATES_COUNTIES VALUES
 (@Alabama, 'AL','Alabama'),
@@ -35,8 +41,8 @@ INSERT INTO LOOKUP_STATES_COUNTIES VALUES
 (NewID(), 'CT','Connecticut'),
 (NewID(), 'DE','Delaware'),
 (NewID(), 'DC','District of Columbia'),
-(NewID(), 'FL','Florida'),
-(NewID(), 'GA','Georgia'),
+(@Florida, 'FL','Florida'),
+(@Georgia, 'GA','Georgia'),
 (NewID(), 'HI','Hawaii'),
 (@Hesse, 'HE','Hesse'),
 (NewID(), 'ID','Idaho'),
@@ -73,7 +79,7 @@ INSERT INTO LOOKUP_STATES_COUNTIES VALUES
 (@Texas, 'TX','Texas'),
 (NewID(), 'UT','Utah'),
 (NewID(), 'VT','Vermont'),
-(NewID(), 'VA','Virginia'),
+(@Virginia, 'VA','Virginia'),
 (NewID(), 'WA','Washington'),
 (NewID(), 'WV','West Virginia'),
 (NewID(), 'WI','Wisconsin'),
@@ -713,3 +719,70 @@ INSERT INTO ROLES VALUES
 (@DianeChambers, 'Diane', 'Chambers', @ShelleyLong),
 (@NormPeterson, 'Norm', 'Peterson', @GeorgeWendt),
 (@WoodyBoyd, 'Woody', 'Boyd', @WoodyHarrelson);
+
+DECLARE @ABC uniqueidentifier;
+DECLARE @NBC uniqueidentifier;
+DECLARE @CBS uniqueidentifier;
+DECLARE @Fox uniqueidentifier;
+DECLARE @CW uniqueidentifier;
+DECLARE @PBS uniqueidentifier;
+DECLARE @Create uniqueidentifier;
+DECLARE @World uniqueidentifier;
+DECLARE @PBSKids uniqueidentifier;
+DECLARE @NHKWorld uniqueidentifier;
+DECLARE @FNX uniqueidentifier;
+DECLARE @France24 uniqueidentifier;
+DECLARE @Mind uniqueidentifier;
+DECLARE @Univison uniqueidentifier;
+DECLARE @Telemundo uniqueidentifier;
+DECLARE @LATV uniqueidentifier;
+DECLARE @MyNetworkTV uniqueidentifier;
+DECLARE @MeTV uniqueidentifier;
+DECLARE @Escape uniqueidentifier;
+DECLARE @Grit uniqueidentifier;
+DECLARE @Laff uniqueidentifier;
+
+SELECT @ABC = NewID();
+SELECT @NBC = NewID();
+SELECT @CBS = NewID();
+SELECT @Fox = NewID();
+SELECT @CW = NewID();
+SELECT @PBS = NewID();
+SELECT @Create = NewID();
+SELECT @World = NewID();
+SELECT @PBSKids = NewID();
+SELECT @NHKWorld = NewID();
+SELECT @FNX = NewID();
+SELECT @France24 = NewID();
+SELECT @Mind = NewID();
+SELECT @Univison = NewID();
+SELECT @Telemundo = NewID();
+SELECT @LATV = NewID();
+SELECT @MyNetworkTV = NewID();
+SELECT @MeTV = NewID();
+SELECT @Escape = NewID();
+SELECT @Grit = NewID();
+SELECT @Laff = NewID();
+
+INSERT INTO NETWORKS VALUES
+(@ABC, 'ABC', '05/15/1943', 'America''s Network: ABC', '1111 Main St', NULL, 'Burbank', @California, 'US'),
+(@NBC, 'NBC', '06/19/1926', 'America''s #1 Network', '30 Rockefeller Plaza', NULL, 'New York City', @NewYork, 'US'),
+(@CBS, 'CBS', '09/18/1927', 'America''s Most Watched Network', '51 West 52nd Street', 'Manhattan', 'New York City', @NewYork, 'US'),
+(@Fox, 'Fox', '10/09/1986', 'We Are Fox', '1234 Madison Ave', NULL, 'New York City', @NewYork, 'US'),
+(@CW, 'CW', '01/24/2006', 'Dare to Defy', '1122 Main St', NULL, 'Burbank', @California, 'US'),
+(@PBS, 'PBS', '11/3/1969', 'Be More', '3524 Smith Dr', NULL, 'Arlington', @Virginia, 'US'),
+(@Create, 'Create', '01/10/2006', 'The TV channel for cooking, arts & crafts, gardening, home improvement, and travel.', '1562 Yorkster Ave', NULL, 'New York City', @NewYork, 'US'),
+(@World, 'World', '01/01/2005', '	Brave. New. Real.', '4353 Bosty Ave', NULL, 'Boston', @Massachusetts, 'US'),
+(@PBSKids, 'PBSKids', '07/11/1994', NULL, '3524 Smith Dr', NULL, 'Arlington', @Virginia, 'US'),
+(@NHKWorld, 'NHKWorld', '01/01/1998', 'Widening Horizons', '43255 Taki Dr', NULL, 'Tokyo', NULL, 'JP'),
+(@FNX, 'FNX', '09/25/2011', NULL, '701 South Mount Vernon Ave', NULL, 'San Bernardino', @California, 'US'),
+(@France24, 'France24', '12/06/2006', 'International News 24/7', '2345 Frenchy Ave', NULL, 'Paris', NULL, 'FR'),
+(@Mind, 'Mind', '01/01/2007', NULL, '1500 Broad St', NULL, 'Philadelphia', @Pennsylvania, 'US'),
+(@Univison, 'Univison', '09/29/1962', 'What unites us', '605 Third Avenue', NULL, 'New York City', @NewYork, 'US'),
+(@Telemundo, 'Telemundo', '01/01/1984', 'Together unstoppable', '3532 Sunny Park', NULL, 'Miami', @Florida, 'US'),
+(@LATV, 'LATV', '01/01/2001', 'Latino Alternative Television', '1234 Angels Dr', NULL, 'Los Angelese', @California, 'US'),
+(@MyNetworkTV, 'MyNetworkTV', '09/05/2006', NULL, '603 Hollow St', NULL, 'Los Angelese', @California, 'US'),
+(@MeTV, 'MeTV', '01/05/2003', 'Memorable entertainment television, that''s memorable, that''s me. MeTV', '123 Example Ave', NULL, 'Chicago', @Illinois, 'US'),
+(@Escape, 'Escape', '08/18/2014', 'Slip Away.', '1111 Falcon Dr', NULL, 'Atlanta', @Georgia, 'US'),
+(@Grit, 'Grit', '08/18/2014', 'Television with Backbone', '1111 Falcon Dr', NULL, 'Atlanta', @Georgia, 'US'),
+(@Laff, 'Laff', '04/15/2015', 'You know you want to.', '1111 Falcon Dr', NULL, 'Atlanta', @Georgia, 'US');

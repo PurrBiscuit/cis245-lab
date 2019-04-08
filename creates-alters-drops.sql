@@ -156,7 +156,7 @@ CREATE TABLE NETWORKS(
 	NetworkHQStreetAddress1		varchar(250)		NOT NULL,
 	NetworkHQStreetAddress2 	varchar(250)		NULL,
 	NetworkHQCity				varchar(100)		NOT NULL,
-	NetworkHQStateCountyID		uniqueidentifier	NOT NULL,
+	NetworkHQStateCountyID		uniqueidentifier	NULL,
 	NetworkHQCountry			varchar(2)			NOT NULL,
 	CONSTRAINT PK_NetworkID PRIMARY KEY(NetworkID)
 );
