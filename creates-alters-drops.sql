@@ -181,7 +181,7 @@ CREATE TABLE PEOPLE(
 	PersonLastName				varchar(100)		NOT NULL,
 	PersonDateOfBirth			date 				NOT NULL,
 	PersonDateOfDeath			date 				NULL,
-	PersonBirthStateCountyID	uniqueidentifier 	NOT NULL,
+	PersonBirthStateCountyID	uniqueidentifier 	NULL,
 	PersonBirthCountry			varchar(2)			NOT NULL,
 	PersonWeightInPounds		smallint			NULL,
 	PersonHeightInInches		tinyint				NULL,
