@@ -544,31 +544,87 @@ INSERT INTO LOOKUP_GENRES VALUES
 (NewID(), 'Amateur'),
 (NewID(), 'Western');
 
+DECLARE @JerrySeinfeld uniqueidentifier;
+DECLARE @JuliaLouisDreyfus uniqueidentifier;
+DECLARE @JasonAlexander uniqueidentifier;
+DECLARE @MichaelRichards uniqueidentifier;
+DECLARE @KelseyGrammer uniqueidentifier;
+DECLARE @DavidPierce uniqueidentifier;
+DECLARE @KaleyCuoco uniqueidentifier;
+DECLARE @MartinLawrence uniqueidentifier;
+DECLARE @TishaCampbellMartin uniqueidentifier;
+DECLARE @JimParsons uniqueidentifier;
+DECLARE @JenniferAniston uniqueidentifier;
+DECLARE @CourtneyCox uniqueidentifier;
+DECLARE @LisaKudrow uniqueidentifier;
+DECLARE @SteveCarell uniqueidentifier;
+DECLARE @JennaFischer uniqueidentifier;
+DECLARE @JohnKrasinski uniqueidentifier;
+DECLARE @WillSmith uniqueidentifier;
+DECLARE @JamesGandolfini uniqueidentifier;
+DECLARE @LorraineBraco uniqueidentifier;
+DECLARE @BeaArthur uniqueidentifier;
+DECLARE @BettyWhite uniqueidentifier;
+DECLARE @RueMcClanahan uniqueidentifier;
+DECLARE @JamesAvery uniqueidentifier;
+DECLARE @TedDanson uniqueidentifier;
+DECLARE @ShelleyLong uniqueidentifier;
+DECLARE @GeorgeWendt uniqueidentifier;
+DECLARE @WoodyHarrelson uniqueidentifier;
+
+SELECT @JerrySeinfeld = NewID();
+SELECT @JuliaLouisDreyfus = NewID();
+SELECT @JasonAlexander = NewID();
+SELECT @MichaelRichards = NewID();
+SELECT @KelseyGrammer = NewID();
+SELECT @DavidPierce = NewID();
+SELECT @KaleyCuoco = NewID();
+SELECT @MartinLawrence = NewID();
+SELECT @TishaCampbellMartin = NewID();
+SELECT @JimParsons = NewID();
+SELECT @JenniferAniston = NewID();
+SELECT @CourtneyCox = NewID();
+SELECT @LisaKudrow = NewID();
+SELECT @SteveCarell = NewID();
+SELECT @JennaFischer = NewID();
+SELECT @JohnKrasinski = NewID();
+SELECT @WillSmith = NewID();
+SELECT @JamesGandolfini = NewID();
+SELECT @LorraineBraco = NewID();
+SELECT @BeaArthur = NewID();
+SELECT @BettyWhite = NewID();
+SELECT @RueMcClanahan = NewID();
+SELECT @JamesAvery = NewID();
+SELECT @TedDanson = NewID();
+SELECT @ShelleyLong = NewID();
+SELECT @GeorgeWendt = NewID();
+SELECT @WoodyHarrelson = NewID();
+
 INSERT INTO PEOPLE VALUES
-(NewID(), 'Jerry', 'Seinfeld', '04/29/54', NULL, @NewYork, 'US', 175, 71, 'm'),
-(NewID(), 'Julia', 'Louis-Dreyfus', '01/31/1961', NULL, @NewYork, 'US', 119, 63, 'f'),
-(NewID(), 'Jason', 'Alexander', '09/23/1959', NULL, @NewJersey, 'US', 195, 65, 'm'),
-(NewID(), 'Michael', 'Richards', '07/24/1949', NULL, @California, 'US', 190, 75, 'm'),
-(NewID(), 'Kelsey', 'Grammer', '02/21/1955', NULL, NULL, 'VI', 172, 73, 'm'),
-(NewID(), 'David', 'Pierce', '04/03/1959', NULL, @NewYork, 'US', 156, 69, 'm'),
-(NewID(), 'Kaley', 'Cuoco', '11/30/1985', NULL, @California, 'US', 126, 66, 'f'),
-(NewID(), 'Martin', 'Lawrence', '04/16/1965', NULL, @Hesse, 'DE', 163, 67, 'm'),
-(NewID(), 'Tisha', 'Campbell-Martin', '10/13/1968', NULL, @Oklahoma, 'US', 130, 64, 'f'),
-(NewID(), 'Jim', 'Parsons', '03/24/1973', NULL, @Texas, 'US', 145, 63, 'm'),
-(NewID(), 'Jennifer', 'Aniston', '02/11/1969', NULL, @California, 'US', 110, 65, 'f'),
-(NewID(), 'Courtney', 'Cox', '06/15/1964', NULL, @Alabama, 'US', 126, 65, 'f'),
-(NewID(), 'Lisa', 'Kudrow', '07/30/1963', NULL, @California, 'US', 137, 68, 'f'),
-(NewID(), 'Steve', 'Carell', '08/16/1962', NULL, @Massachusetts, 'US', 172, 69, 'm'),
-(NewID(), 'Jenna', 'Fischer', '03/07/1974', NULL, @Indiana, 'US', 125, 65, 'f'),
-(NewID(), 'John', 'Krasinski', '10/20/1979', NULL, @NewYork, 'US', 174, 75, 'm'),
-(NewID(), 'Will', 'Smith', '09/25/1968', NULL, @Pennsylvania, 'US', 181, 74, 'm'),
-(NewID(), 'James', 'Gandolfini', '09/18/1961', '06/19/2013', @NewJersey, 'US', 274, 72, 'm'),
-(NewID(), 'Lorraine', 'Braco', '10/02/1954', NULL, @NewYork, 'US', 132, 68, 'f'),
-(NewID(), 'Bea', 'Arthur', '05/13/1922', '04/25/2009', @California, 'US', 120, 66, 'f'),
-(NewID(), 'Betty', 'White', '01/17/1922', NULL, @Illinois, 'US', 115, 64, 'f'),
-(NewID(), 'Rue', 'McClanahan', '02/21/1934', '06/03/2010', @Oklahoma, 'US', 110, 63, 'f'),
-(NewID(), 'James', 'Avery', '11/27/1945', '12/31/2013', @California, 'US', 265, 77, 'm'),
-(NewID(), 'Ted', 'Danson', '12/29/1947', NULL, @California, 'US', 185, 74, 'm'),
-(NewID(), 'Shelley', 'Long', '08/23/1949', NULL, @Indiana, 'US', 120, 68, 'f'),
-(NewID(), 'George', 'Wendt', '10/17/1948', NULL, @Illinois, 'US', 225, 68, 'm'),
-(NewID(), 'Woody', 'Harrelson', '07/23/1961', NULL, @Texas, 'US', 180, 70, 'm');
+(@JerrySeinfeld, 'Jerry', 'Seinfeld', '04/29/54', NULL, @NewYork, 'US', 175, 71, 'm'),
+(@JuliaLouisDreyfus, 'Julia', 'Louis-Dreyfus', '01/31/1961', NULL, @NewYork, 'US', 119, 63, 'f'),
+(@JasonAlexander, 'Jason', 'Alexander', '09/23/1959', NULL, @NewJersey, 'US', 195, 65, 'm'),
+(@MichaelRichards, 'Michael', 'Richards', '07/24/1949', NULL, @California, 'US', 190, 75, 'm'),
+(@KelseyGrammer, 'Kelsey', 'Grammer', '02/21/1955', NULL, NULL, 'VI', 172, 73, 'm'),
+(@DavidPierce, 'David', 'Pierce', '04/03/1959', NULL, @NewYork, 'US', 156, 69, 'm'),
+(@KaleyCuoco, 'Kaley', 'Cuoco', '11/30/1985', NULL, @California, 'US', 126, 66, 'f'),
+(@MartinLawrence, 'Martin', 'Lawrence', '04/16/1965', NULL, @Hesse, 'DE', 163, 67, 'm'),
+(@TishaCampbellMartin, 'Tisha', 'Campbell-Martin', '10/13/1968', NULL, @Oklahoma, 'US', 130, 64, 'f'),
+(@JimParsons, 'Jim', 'Parsons', '03/24/1973', NULL, @Texas, 'US', 145, 63, 'm'),
+(@JenniferAniston, 'Jennifer', 'Aniston', '02/11/1969', NULL, @California, 'US', 110, 65, 'f'),
+(@CourtneyCox, 'Courtney', 'Cox', '06/15/1964', NULL, @Alabama, 'US', 126, 65, 'f'),
+(@LisaKudrow, 'Lisa', 'Kudrow', '07/30/1963', NULL, @California, 'US', 137, 68, 'f'),
+(@SteveCarell, 'Steve', 'Carell', '08/16/1962', NULL, @Massachusetts, 'US', 172, 69, 'm'),
+(@JennaFischer, 'Jenna', 'Fischer', '03/07/1974', NULL, @Indiana, 'US', 125, 65, 'f'),
+(@JohnKrasinski, 'John', 'Krasinski', '10/20/1979', NULL, @NewYork, 'US', 174, 75, 'm'),
+(@WillSmith, 'Will', 'Smith', '09/25/1968', NULL, @Pennsylvania, 'US', 181, 74, 'm'),
+(@JamesGandolfini, 'James', 'Gandolfini', '09/18/1961', '06/19/2013', @NewJersey, 'US', 274, 72, 'm'),
+(@LorraineBraco, 'Lorraine', 'Braco', '10/02/1954', NULL, @NewYork, 'US', 132, 68, 'f'),
+(@BeaArthur, 'Bea', 'Arthur', '05/13/1922', '04/25/2009', @California, 'US', 120, 66, 'f'),
+(@BettyWhite, 'Betty', 'White', '01/17/1922', NULL, @Illinois, 'US', 115, 64, 'f'),
+(@RueMcClanahan, 'Rue', 'McClanahan', '02/21/1934', '06/03/2010', @Oklahoma, 'US', 110, 63, 'f'),
+(@JamesAvery, 'James', 'Avery', '11/27/1945', '12/31/2013', @California, 'US', 265, 77, 'm'),
+(@TedDanson, 'Ted', 'Danson', '12/29/1947', NULL, @California, 'US', 185, 74, 'm'),
+(@ShelleyLong, 'Shelley', 'Long', '08/23/1949', NULL, @Indiana, 'US', 120, 68, 'f'),
+(@GeorgeWendt, 'George', 'Wendt', '10/17/1948', NULL, @Illinois, 'US', 225, 68, 'm'),
+(@WoodyHarrelson, 'Woody', 'Harrelson', '07/23/1961', NULL, @Texas, 'US', 180, 70, 'm');
