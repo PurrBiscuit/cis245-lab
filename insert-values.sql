@@ -628,3 +628,88 @@ INSERT INTO PEOPLE VALUES
 (@ShelleyLong, 'Shelley', 'Long', '08/23/1949', NULL, @Indiana, 'US', 120, 68, 'f'),
 (@GeorgeWendt, 'George', 'Wendt', '10/17/1948', NULL, @Illinois, 'US', 225, 68, 'm'),
 (@WoodyHarrelson, 'Woody', 'Harrelson', '07/23/1961', NULL, @Texas, 'US', 180, 70, 'm');
+
+DECLARE @JerrySeinfeldRole uniqueidentifier;
+DECLARE @ElaineBenes uniqueidentifier;
+DECLARE @GeorgeConstanza uniqueidentifier;
+DECLARE @CosmoKramer uniqueidentifier;
+DECLARE @FrasierCrane uniqueidentifier;
+DECLARE @NilesCrane uniqueidentifier;
+DECLARE @Penny uniqueidentifier;
+DECLARE @MartinPayne uniqueidentifier;
+DECLARE @GinaWaters uniqueidentifier;
+DECLARE @SheldonCooper uniqueidentifier;
+DECLARE @RachelGreen uniqueidentifier;
+DECLARE @MonicaGeller uniqueidentifier;
+DECLARE @PhoebeBuffay uniqueidentifier;
+DECLARE @MichaelScott uniqueidentifier;
+DECLARE @PamBeesly uniqueidentifier;
+DECLARE @JimHalpert uniqueidentifier;
+DECLARE @WillSmithRole uniqueidentifier;
+DECLARE @TonySoprano uniqueidentifier;
+DECLARE @JenniferMelfi uniqueidentifier;
+DECLARE @DorothyZbornak uniqueidentifier;
+DECLARE @RoseNylund uniqueidentifier;
+DECLARE @BlancheDevereaux uniqueidentifier;
+DECLARE @PhilipBanks uniqueidentifier;
+DECLARE @SamMalone uniqueidentifier;
+DECLARE @DianeChambers uniqueidentifier;
+DECLARE @NormPeterson uniqueidentifier;
+DECLARE @WoodyBoyd uniqueidentifier;
+
+SELECT @JerrySeinfeldRole = NewID();
+SELECT @ElaineBenes = NewID();
+SELECT @GeorgeConstanza = NewID();
+SELECT @CosmoKramer = NewID();
+SELECT @FrasierCrane = NewID();
+SELECT @NilesCrane = NewID();
+SELECT @Penny = NewID();
+SELECT @MartinPayne = NewID();
+SELECT @GinaWaters = NewID();
+SELECT @SheldonCooper = NewID();
+SELECT @RachelGreen = NewID();
+SELECT @MonicaGeller = NewID();
+SELECT @PhoebeBuffay = NewID();
+SELECT @MichaelScott = NewID();
+SELECT @PamBeesly = NewID();
+SELECT @JimHalpert = NewID();
+SELECT @WillSmithRole = NewID();
+SELECT @TonySoprano = NewID();
+SELECT @JenniferMelfi = NewID();
+SELECT @DorothyZbornak = NewID();
+SELECT @RoseNylund = NewID();
+SELECT @BlancheDevereaux = NewID();
+SELECT @PhilipBanks = NewID();
+SELECT @SamMalone = NewID();
+SELECT @DianeChambers = NewID();
+SELECT @NormPeterson = NewID();
+SELECT @WoodyBoyd = NewID();
+
+INSERT INTO ROLES VALUES
+(@JerrySeinfeldRole, 'Jerry', 'Seinfeld', @JerrySeinfeld),
+(@ElaineBenes, 'Elaine', 'Benes', @JuliaLouisDreyfus),
+(@GeorgeConstanza, 'George', 'Constanza', @JasonAlexander),
+(@CosmoKramer, 'Cosmo', 'Kramer', @MichaelRichards),
+(@FrasierCrane, 'Frasier', 'Crane', @KelseyGrammer),
+(@NilesCrane, 'Niles', 'Crane', @DavidPierce),
+(@Penny, 'Penny', NULL, @KaleyCuoco),
+(@MartinPayne, 'Martin', 'Payne', @MartinLawrence),
+(@GinaWaters, 'Gina', 'Waters', @TishaCampbellMartin),
+(@SheldonCooper, 'Sheldon', 'Cooper', @JimParsons),
+(@RachelGreen, 'Rachel', 'Green', @JenniferAniston),
+(@MonicaGeller, 'Monica', 'Geller', @CourtneyCox),
+(@PhoebeBuffay, 'Phoebe', 'Buffay', @LisaKudrow),
+(@MichaelScott, 'Michael', 'Scott', @SteveCarell),
+(@PamBeesly, 'Pam', 'Beesly', @JennaFischer),
+(@JimHalpert, 'Jim', 'Halpert', @JohnKrasinski),
+(@WillSmithRole, 'Will', 'Smith', @WillSmith),
+(@TonySoprano, 'Tony', 'Soprano', @JamesGandolfini),
+(@JenniferMelfi, 'Jennifer', 'Melfi', @LorraineBraco),
+(@DorothyZbornak, 'Dorothy', 'Zbornak', @BeaArthur),
+(@RoseNylund, 'Rose', 'Nylund', @BettyWhite),
+(@BlancheDevereaux, 'Blanche', 'Devereaux', @RueMcClanahan),
+(@PhilipBanks, 'Philip', 'Banks', @JamesAvery),
+(@SamMalone, 'Sam', 'Malone', @TedDanson),
+(@DianeChambers, 'Diane', 'Chambers', @ShelleyLong),
+(@NormPeterson, 'Norm', 'Peterson', @GeorgeWendt),
+(@WoodyBoyd, 'Woody', 'Boyd', @WoodyHarrelson);
