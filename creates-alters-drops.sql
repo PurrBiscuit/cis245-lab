@@ -45,3 +45,56 @@ CREATE TABLE PEOPLE(
 	CONSTRAINT PK_PersonID PRIMARY KEY(PersonID)
 );
 
+IF OBJECT_ID('dbo.LOOKUP_COUNTRIES', 'U') IS NOT NULL
+DROP TABLE dbo.LOOKUP_COUNTRIES;
+
+CREATE TABLE LOOKUP_COUNTRIES(
+	Country 		varchar(2) 		NOT NULL,
+	CountryName 	varchar(100) 	NOT NULL,
+	CONSTRAINT PK_Country PRIMARY KEY(Country)
+);
+
+IF OBJECT_ID('dbo.PRODUCTION_COMPANIES', 'U') IS NOT NULL
+DROP TABLE dbo.PRODUCTION_COMPANIES;
+
+CREATE TABLE PRODUCTION_COMPANIES(
+	ProductionCompanyID 				uniqueidentifier 	NOT NULL,
+	ProductionCompanyName				varchar(150)		NOT NULL,
+	ProductionCompanyFounded			date 				NOT NULL,
+	ProductionCompanySlogan				varchar(500)		NULL,
+	ProductionCompanyHQStreetAddress1	varchar(250)		NOT NULL,
+	ProductionCompanyHQStreetAddress2	varchar(250)		NULL,
+	ProductionCompanyHQCity				varchar(100)		NOT NULL,
+	ProductionCompanyHQStateCountyID	uniqueidentifier	NOT NULL,
+	ProductionCompanyHQCountry			varchar(2)			NOT NULL,
+	CONSTRAINT PK_ProductionCompanyID PRIMARY KEY(ProductionCompanyID)
+);
+
+IF OBJECT_ID('dbo.PRODUCTION_COMPANY_SHOWS', 'U') IS NOT NULL
+DROP TABLE dbo.PRODUCTION_COMPANY_SHOWS;
+
+CREATE TABLE PRODUCTION_COMPANY_SHOWS(
+	ProductionCompanyID 	uniqueidentifier 	NOT NULL,
+	ShowID 					uniqueidentifier 	NOT NULL,
+	CONSTRAINT PK_ProductionCompanyShows PRIMARY KEY(ProductionCompanyID,ShowID)
+);
+
+IF OBJECT_ID('dbo.ROLES', 'U') IS NOT NULL
+DROP TABLE dbo.ROLES;
+
+CREATE TABLE ROLES(
+	RoleID 			uniqueidentifier 	NOT NULL,
+	RoleFirstName	varchar(100)		NOT NULL,
+	RoleLastName	varchar(100)		NULL,
+	PersonID 		uniqueidentifier	NOT NULL,
+	CONSTRAINT PK_RoleID PRIMARY KEY(RoleID)
+);
+
+IF OBJECT_ID('dbo.EPISODE_WRITERS', 'U') IS NOT NULL
+DROP TABLE dbo.EPISODE_WRITERS;
+
+CREATE TABLE EPISODE_WRITERS(
+	EpisodeID 	uniqueidentifier 	NOT NULL,
+	PersonID 	uniqueidentifier 	NOT NULL,
+	CONSTRAINT PK_EpisodeWriters PRIMARY KEY(EpisodeID,PersonID)
+);
