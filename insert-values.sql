@@ -780,9 +780,139 @@ INSERT INTO NETWORKS VALUES
 (@Mind, 'Mind', '01/01/2007', NULL, '1500 Broad St', NULL, 'Philadelphia', @Pennsylvania, 'US'),
 (@Univison, 'Univison', '09/29/1962', 'What unites us', '605 Third Avenue', NULL, 'New York City', @NewYork, 'US'),
 (@Telemundo, 'Telemundo', '01/01/1984', 'Together unstoppable', '3532 Sunny Park', NULL, 'Miami', @Florida, 'US'),
-(@LATV, 'LATV', '01/01/2001', 'Latino Alternative Television', '1234 Angels Dr', NULL, 'Los Angelese', @California, 'US'),
-(@MyNetworkTV, 'MyNetworkTV', '09/05/2006', NULL, '603 Hollow St', NULL, 'Los Angelese', @California, 'US'),
+(@LATV, 'LATV', '01/01/2001', 'Latino Alternative Television', '1234 Angels Dr', NULL, 'Los Angeles', @California, 'US'),
+(@MyNetworkTV, 'MyNetworkTV', '09/05/2006', NULL, '603 Hollow St', NULL, 'Los Angeles', @California, 'US'),
 (@MeTV, 'MeTV', '01/05/2003', 'Memorable entertainment television, that''s memorable, that''s me. MeTV', '123 Example Ave', NULL, 'Chicago', @Illinois, 'US'),
 (@Escape, 'Escape', '08/18/2014', 'Slip Away.', '1111 Falcon Dr', NULL, 'Atlanta', @Georgia, 'US'),
 (@Grit, 'Grit', '08/18/2014', 'Television with Backbone', '1111 Falcon Dr', NULL, 'Atlanta', @Georgia, 'US'),
 (@Laff, 'Laff', '04/15/2015', 'You know you want to.', '1111 Falcon Dr', NULL, 'Atlanta', @Georgia, 'US');
+
+DECLARE @ProductionStudioTest1 uniqueidentifier;
+DECLARE @ProductionStudioTest2 uniqueidentifier;
+DECLARE @ProductionStudioTest3 uniqueidentifier;
+DECLARE @ProductionStudioTest4 uniqueidentifier;
+DECLARE @ProductionStudioTest5 uniqueidentifier;
+DECLARE @ProductionStudioTest6 uniqueidentifier;
+DECLARE @ProductionStudioTest7 uniqueidentifier;
+DECLARE @ProductionStudioTest8 uniqueidentifier;
+DECLARE @ProductionStudioTest9 uniqueidentifier;
+DECLARE @ProductionStudioTest10 uniqueidentifier;
+DECLARE @ProductionStudioTest11 uniqueidentifier;
+DECLARE @ProductionStudioTest12 uniqueidentifier;
+DECLARE @ProductionStudioTest13 uniqueidentifier;
+DECLARE @ProductionStudioTest14 uniqueidentifier;
+DECLARE @ProductionStudioTest15 uniqueidentifier;
+DECLARE @ProductionStudioTest16 uniqueidentifier;
+DECLARE @ProductionStudioTest17 uniqueidentifier;
+DECLARE @ProductionStudioTest18 uniqueidentifier;
+DECLARE @ProductionStudioTest19 uniqueidentifier;
+DECLARE @ProductionStudioTest20 uniqueidentifier;
+
+SELECT @ProductionStudioTest1 = NewID();
+SELECT @ProductionStudioTest2 = NewID();
+SELECT @ProductionStudioTest3 = NewID();
+SELECT @ProductionStudioTest4 = NewID();
+SELECT @ProductionStudioTest5 = NewID();
+SELECT @ProductionStudioTest6 = NewID();
+SELECT @ProductionStudioTest7 = NewID();
+SELECT @ProductionStudioTest8 = NewID();
+SELECT @ProductionStudioTest9 = NewID();
+SELECT @ProductionStudioTest10 = NewID();
+SELECT @ProductionStudioTest11 = NewID();
+SELECT @ProductionStudioTest12 = NewID();
+SELECT @ProductionStudioTest13 = NewID();
+SELECT @ProductionStudioTest14 = NewID();
+SELECT @ProductionStudioTest15 = NewID();
+SELECT @ProductionStudioTest16 = NewID();
+SELECT @ProductionStudioTest17 = NewID();
+SELECT @ProductionStudioTest18 = NewID();
+SELECT @ProductionStudioTest19 = NewID();
+SELECT @ProductionStudioTest20 = NewID();
+
+INSERT INTO PRODUCTION_COMPANIES VALUES
+(@ProductionStudioTest1, 'Production Studio 1', '01/01/1970', 'Test Slogan 1', '11 Testing Dr', NULL, 'New York', @NewYork, 'US'),
+(@ProductionStudioTest2, 'Production Studio 2', '11/01/1962', 'Test Slogan 2', '22 Testing Dr', NULL, 'Burbank', @California, 'US'),
+(@ProductionStudioTest3, 'Production Studio 3', '08/08/1980', 'Test Slogan 3', '33 Testing Dr', NULL, 'Sacramento', @California, 'US'),
+(@ProductionStudioTest4, 'Production Studio 4', '12/06/1950', 'Test Slogan 4', '44 Testing Dr', NULL, 'Arlington', @Virginia, 'US'),
+(@ProductionStudioTest5, 'Production Studio 5', '11/12/1935', 'Test Slogan 5', '55 Testing Dr', NULL, 'Miami', @Florida, 'US'),
+(@ProductionStudioTest6, 'Production Studio 6', '04/03/1956', 'Test Slogan 6', '66 Testing Dr', NULL, 'Atlanta', @Georgia, 'US'),
+(@ProductionStudioTest7, 'Production Studio 7', '10/24/1976', 'Test Slogan 7', '77 Testing Dr', NULL, 'New York', @NewYork, 'US'),
+(@ProductionStudioTest8, 'Production Studio 8', '06/05/1981', 'Test Slogan 8', '88 Testing Dr', NULL, 'New York', @NewYork, 'US'),
+(@ProductionStudioTest9, 'Production Studio 9', '11/02/1999', 'Test Slogan 9', '99 Testing Dr', NULL, 'Philadelphia', @Pennsylvania, 'US'),
+(@ProductionStudioTest10, 'Production Studio 10', '09/11/2001', 'Test Slogan 10', '1010 Testing Dr', NULL, 'Dallas', @Texas, 'US'),
+(@ProductionStudioTest11, 'Production Studio 11', '11/03/2005', 'Test Slogan 11', '1111 Testing Dr', NULL, 'Tulsa', @Oklahoma, 'US'),
+(@ProductionStudioTest12, 'Production Studio 12', '06/25/1965', 'Test Slogan 12', '1212 Testing Dr', NULL, 'Philadelphia', @Pennsylvania, 'US'),
+(@ProductionStudioTest13, 'Production Studio 13', '04/04/1960', 'Test Slogan 13', '1313 Testing Dr', NULL, 'New York', @NewYork, 'US'),
+(@ProductionStudioTest14, 'Production Studio 14', '11/23/1958', 'Test Slogan 14', '1414 Testing Dr', NULL, 'Boston', @Massachusetts, 'US'),
+(@ProductionStudioTest15, 'Production Studio 15', '03/14/1954', 'Test Slogan 15', '1515 Testing Dr', NULL, 'Birmingham', @Alabama, 'US'),
+(@ProductionStudioTest16, 'Production Studio 16', '09/14/1943', 'Test Slogan 16', '1616 Testing Dr', NULL, 'Los Angeles', @California, 'US'),
+(@ProductionStudioTest17, 'Production Studio 17', '10/01/1966', 'Test Slogan 17', '1717 Testing Dr', NULL, 'New York', @NewYork, 'US'),
+(@ProductionStudioTest18, 'Production Studio 18', '10/04/1990', 'Test Slogan 18', '1818 Testing Dr', NULL, 'Los Angeles', @California, 'US'),
+(@ProductionStudioTest19, 'Production Studio 19', '12/17/1988', 'Test Slogan 19', '1919 Testing Dr', NULL, 'New York', @NewYork, 'US'),
+(@ProductionStudioTest20, 'Production Studio 20', '12/05/1984', 'Test Slogan 20', '2020 Testing Dr', NULL, 'New York', @NewYork, 'US');
+
+DECLARE @Seinfeld uniqueidentifier;
+DECLARE @Frasier uniqueidentifier;
+DECLARE @BigBangTheory uniqueidentifier;
+DECLARE @Friends uniqueidentifier;
+DECLARE @Office uniqueidentifier;
+DECLARE @FreshPrince uniqueidentifier;
+DECLARE @GoldenGirls uniqueidentifier;
+DECLARE @Cheers uniqueidentifier;
+DECLARE @ShowTest1 uniqueidentifier;
+DECLARE @ShowTest2 uniqueidentifier;
+DECLARE @ShowTest3 uniqueidentifier;
+DECLARE @ShowTest4 uniqueidentifier;
+DECLARE @ShowTest5 uniqueidentifier;
+DECLARE @ShowTest6 uniqueidentifier;
+DECLARE @ShowTest7 uniqueidentifier;
+DECLARE @ShowTest8 uniqueidentifier;
+DECLARE @ShowTest9 uniqueidentifier;
+DECLARE @ShowTest10 uniqueidentifier;
+DECLARE @ShowTest11 uniqueidentifier;
+DECLARE @ShowTest12 uniqueidentifier;
+
+SELECT @Seinfeld = NewID();
+SELECT @Frasier = NewID();
+SELECT @BigBangTheory = NewID();
+SELECT @Friends = NewID();
+SELECT @Office = NewID();
+SELECT @FreshPrince = NewID();
+SELECT @GoldenGirls = NewID();
+SELECT @Cheers = NewID();
+SELECT @ShowTest1 = NewID();
+SELECT @ShowTest2 = NewID();
+SELECT @ShowTest3 = NewID();
+SELECT @ShowTest4 = NewID();
+SELECT @ShowTest5 = NewID();
+SELECT @ShowTest6 = NewID();
+SELECT @ShowTest7 = NewID();
+SELECT @ShowTest8 = NewID();
+SELECT @ShowTest9 = NewID();
+SELECT @ShowTest10 = NewID();
+SELECT @ShowTest11 = NewID();
+SELECT @ShowTest12 = NewID();
+
+INSERT INTO SHOWS VALUES
+(@Seinfeld, 'Seinfeld', 'US', 'eng', @ABC),
+(@Frasier, 'Frasier', 'US', 'eng', @NBC),
+(@BigBangTheory, 'The Big Bang Theory', 'US', 'eng', @Fox),
+(@Friends, 'Friends', 'US', 'eng', @CBS),
+(@Office, 'Office', 'US', 'eng', @NBC),
+(@FreshPrince, 'The Fresh Prince of Bel Air', 'US', 'eng', @CBS),
+(@GoldenGirls, 'The Golden Girls', 'US', 'eng', @Fox),
+(@Cheers, 'Cheers', 'US', 'eng', @CBS),
+(@ShowTest1, 'Test Show 1', 'US', 'eng', @NHKWorld),
+(@ShowTest2, 'Test Show 2', 'US', 'spa', @Telemundo),
+(@ShowTest3, 'Test Show 3', 'US', 'spa', @Univison),
+(@ShowTest4, 'Test Show 4', 'US', 'fre', @France24),
+(@ShowTest5, 'Test Show 5', 'US', 'spa', @Telemundo),
+(@ShowTest6, 'Test Show 6', 'US', 'eng', @Mind),
+(@ShowTest7, 'Test Show 7', 'US', 'spa', @Univison),
+(@ShowTest8, 'Test Show 8', 'US', 'eng', @PBS),
+(@ShowTest9, 'Test Show 9', 'US', 'spa', @Telemundo),
+(@ShowTest10, 'Test Show 10', 'US', 'ger', @Grit),
+(@ShowTest11, 'Test Show 11', 'US', 'eng', @Laff),
+(@ShowTest12, 'Test Show 12', 'US', 'fra', @France24);
+
+

@@ -140,7 +140,7 @@ CREATE TABLE PRODUCTION_COMPANIES(
 	ProductionCompanyHQStreetAddress1	varchar(250)		NOT NULL,
 	ProductionCompanyHQStreetAddress2	varchar(250)		NULL,
 	ProductionCompanyHQCity				varchar(100)		NOT NULL,
-	ProductionCompanyHQStateCountyID	uniqueidentifier	NOT NULL,
+	ProductionCompanyHQStateCountyID	uniqueidentifier	NULL,
 	ProductionCompanyHQCountry			varchar(2)			NOT NULL,
 	CONSTRAINT PK_ProductionCompanyID PRIMARY KEY(ProductionCompanyID)
 );
