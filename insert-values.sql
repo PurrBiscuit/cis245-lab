@@ -509,12 +509,35 @@ INSERT INTO LOOKUP_LANGUAGES VALUES
 ('zha','Zhuang; Chuang'),
 ('zul','Zulu');
 
+DECLARE @Sitcom uniqueidentifier;
+DECLARE @Action uniqueidentifier;
+DECLARE @Crime uniqueidentifier;
+DECLARE @Drama uniqueidentifier;
+DECLARE @Horror uniqueidentifier;
+DECLARE @SciFi uniqueidentifier;
+DECLARE @Fantasy uniqueidentifier;
+DECLARE @Sports uniqueidentifier;
+DECLARE @Mockumentary uniqueidentifier;
+DECLARE @TalkShow uniqueidentifier;
+
+SELECT @Sitcom = NewID();
+SELECT @Action = NewID();
+SELECT @Crime = NewID();
+SELECT @Drama = NewID();
+SELECT @Horror = NewID();
+SELECT @SciFi = NewID();
+SELECT @Fantasy = NewID();
+SELECT @Sports = NewID();
+SELECT @Mockumentary = NewID();
+SELECT @TalkShow = NewID();
+
 INSERT INTO LOOKUP_GENRES VALUES
-(NewID(), 'Sitcom'),
-(NewID(), 'Science-ficton'),
+(@Sitcom, 'Sitcom'),
+(@SciFi, 'Science-ficton'),
 (NewID(), 'Satire'),
-(NewID(), 'Action'),
-(NewID(), 'Drama'),
+(@Action, 'Action'),
+(@Crime, 'Crime'),
+(@Drama, 'Drama'),
 (NewID(), 'Slapstick'),
 (NewID(), 'Sketch comedy'),
 (NewID(), 'Variety'),
@@ -523,13 +546,13 @@ INSERT INTO LOOKUP_GENRES VALUES
 (NewID(), 'Adult content'),
 (NewID(), 'Adventure'),
 (NewID(), 'Courtroom drama'),
-(NewID(), 'Fantasy'),
-(NewID(), 'Horror'),
+(@Fantasy, 'Fantasy'),
+(@Horror, 'Horror'),
 (NewID(), 'Legal drama'),
 (NewID(), 'Medical drama'),
 (NewID(), 'Thriller'),
 (NewID(), 'Romantic Comedy'),
-(NewID(), 'Mockumentary'),
+(@Mockumentary, 'Mockumentary'),
 (NewID(), 'Game show'),
 (NewID(), 'Educational'),
 (NewID(), 'Music television'),
@@ -537,8 +560,8 @@ INSERT INTO LOOKUP_GENRES VALUES
 (NewID(), 'Religious'),
 (NewID(), 'Reality'),
 (NewID(), 'Stand-up comedy'),
-(NewID(), 'Sports'),
-(NewID(), 'Talk show'),
+(@Sports, 'Sports'),
+(@TalkShow, 'Talk show'),
 (NewID(), 'Cooking show'),
 (NewID(), 'Infomercials'),
 (NewID(), 'Soap opera'),
@@ -859,6 +882,7 @@ DECLARE @Office uniqueidentifier;
 DECLARE @FreshPrince uniqueidentifier;
 DECLARE @GoldenGirls uniqueidentifier;
 DECLARE @Cheers uniqueidentifier;
+DECLARE @Sopranos uniqueidentifier;
 DECLARE @ShowTest1 uniqueidentifier;
 DECLARE @ShowTest2 uniqueidentifier;
 DECLARE @ShowTest3 uniqueidentifier;
@@ -880,6 +904,7 @@ SELECT @Office = NewID();
 SELECT @FreshPrince = NewID();
 SELECT @GoldenGirls = NewID();
 SELECT @Cheers = NewID();
+SELECT @Sopranos = NewID();
 SELECT @ShowTest1 = NewID();
 SELECT @ShowTest2 = NewID();
 SELECT @ShowTest3 = NewID();
@@ -902,7 +927,8 @@ INSERT INTO SHOWS VALUES
 (@FreshPrince, 'The Fresh Prince of Bel Air', 'US', 'eng', @CBS),
 (@GoldenGirls, 'The Golden Girls', 'US', 'eng', @Fox),
 (@Cheers, 'Cheers', 'US', 'eng', @CBS),
-(@ShowTest1, 'Test Show 1', 'US', 'eng', @NHKWorld),
+(@Sopranos, 'The Sopranos', 'US', 'eng', @ABC),
+(@ShowTest1, 'Test Show 1', 'US', 'ger', @Laff),
 (@ShowTest2, 'Test Show 2', 'US', 'spa', @Telemundo),
 (@ShowTest3, 'Test Show 3', 'US', 'spa', @Univison),
 (@ShowTest4, 'Test Show 4', 'US', 'fre', @France24),
@@ -913,6 +939,34 @@ INSERT INTO SHOWS VALUES
 (@ShowTest9, 'Test Show 9', 'US', 'spa', @Telemundo),
 (@ShowTest10, 'Test Show 10', 'US', 'ger', @Grit),
 (@ShowTest11, 'Test Show 11', 'US', 'eng', @Laff),
-(@ShowTest12, 'Test Show 12', 'US', 'fra', @France24);
+(@ShowTest12, 'Test Show 12', 'US', 'fre', @France24);
 
-
+INSERT INTO SHOW_GENRES VALUES
+(@Sitcom, @Seinfeld),
+(@Horror, @ShowTest1),
+(@Action, @ShowTest1),
+(@Fantasy, @ShowTest2),
+(@Sitcom, @Frasier),
+(@Sports, @ShowTest3),
+(@TalkShow, @ShowTest4),
+(@Sitcom, @BigBangTheory),
+(@Action, @ShowTest4),
+(@SciFi, @ShowTest5),
+(@Mockumentary, @ShowTest6),
+(@Horror, @ShowTest7),
+(@Drama, @ShowTest7),
+(@Action, @ShowTest7),
+(@Drama, @ShowTest8),
+(@Sitcom, @Friends),
+(@Sitcom, @Office),
+(@Sitcom, @FreshPrince),
+(@Fantasy, @ShowTest9),
+(@Sitcom, @GoldenGirls),
+(@Action, @ShowTest9),
+(@Sports, @ShowTest10),
+(@TalkShow, @ShowTest11),
+(@Action, @ShowTest12),
+(@Sports, @ShowTest12),
+(@Crime, @Sopranos),
+(@Drama, @Sopranos),
+(@Sitcom, @Cheers);
