@@ -1,2 +1,2 @@
 # cis245-lab
-SQL Code for CIS245 Lan
+SQL Code for CIS245 Lab

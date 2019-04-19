@@ -600,6 +600,16 @@ DECLARE @TedDanson uniqueidentifier;
 DECLARE @ShelleyLong uniqueidentifier;
 DECLARE @GeorgeWendt uniqueidentifier;
 DECLARE @WoodyHarrelson uniqueidentifier;
+DECLARE @Director1 uniqueidentifier;
+DECLARE @Director2 uniqueidentifier;
+DECLARE @Director3 uniqueidentifier;
+DECLARE @Director4 uniqueidentifier;
+DECLARE @Director5 uniqueidentifier;
+DECLARE @Writer1 uniqueidentifier;
+DECLARE @Writer2 uniqueidentifier;
+DECLARE @Writer3 uniqueidentifier;
+DECLARE @Writer4 uniqueidentifier;
+DECLARE @Writer5 uniqueidentifier;
 
 SELECT @JerrySeinfeld = NewID();
 SELECT @JuliaLouisDreyfus = NewID();
@@ -628,9 +638,19 @@ SELECT @TedDanson = NewID();
 SELECT @ShelleyLong = NewID();
 SELECT @GeorgeWendt = NewID();
 SELECT @WoodyHarrelson = NewID();
+SELECT @Director1 = NewID();
+SELECT @Director2 = NewID();
+SELECT @Director3 = NewID();
+SELECT @Director4 = NewID();
+SELECT @Director5 = NewID();
+SELECT @Writer1 = NewID();
+SELECT @Writer2 = NewID();
+SELECT @Writer3 = NewID();
+SELECT @Writer4 = NewID();
+SELECT @Writer5 = NewID();
 
 INSERT INTO PEOPLE VALUES
-(@JerrySeinfeld, 'Jerry', 'Seinfeld', '04/29/54', NULL, @NewYork, 'US', 175, 71, 'm'),
+(@JerrySeinfeld, 'Jerry', 'Seinfeld', '04/29/1954', NULL, @NewYork, 'US', 175, 71, 'm'),
 (@JuliaLouisDreyfus, 'Julia', 'Louis-Dreyfus', '01/31/1961', NULL, @NewYork, 'US', 119, 63, 'f'),
 (@JasonAlexander, 'Jason', 'Alexander', '09/23/1959', NULL, @NewJersey, 'US', 195, 65, 'm'),
 (@MichaelRichards, 'Michael', 'Richards', '07/24/1949', NULL, @California, 'US', 190, 75, 'm'),
@@ -656,7 +676,17 @@ INSERT INTO PEOPLE VALUES
 (@TedDanson, 'Ted', 'Danson', '12/29/1947', NULL, @California, 'US', 185, 74, 'm'),
 (@ShelleyLong, 'Shelley', 'Long', '08/23/1949', NULL, @Indiana, 'US', 120, 68, 'f'),
 (@GeorgeWendt, 'George', 'Wendt', '10/17/1948', NULL, @Illinois, 'US', 225, 68, 'm'),
-(@WoodyHarrelson, 'Woody', 'Harrelson', '07/23/1961', NULL, @Texas, 'US', 180, 70, 'm');
+(@WoodyHarrelson, 'Woody', 'Harrelson', '07/23/1961', NULL, @Texas, 'US', 180, 70, 'm'),
+(@Director1, 'Director', 'One', '01/02/1955', NULL, @NewYork, 'US', 180, 72, 'm'),
+(@Director2, 'Director', 'Two', '01/02/1965', NULL, @California, 'US', 195, 70, 'm'),
+(@Director3, 'Director', 'Three', '01/02/1975', NULL, @California, 'US', 115, 65, 'f'),
+(@Director4, 'Director', 'Four', '01/02/1958', NULL, @NewYork, 'US', 210, 68, 'm'),
+(@Director5, 'Director', 'Five', '01/02/1935', '10/15/2018', @Oklahoma, 'US', 180, 68, 'm'),
+(@Writer1, 'Writer', 'One', '01/02/59', NULL, @NewYork, 'US', 190, 69, 'm'),
+(@Writer2, 'Writer', 'Two', '01/02/24', '11/25/1994', @NewYork, 'US', 135, 70, 'f'),
+(@Writer3, 'Writer', 'Three', '01/02/81', NULL, @NewJersey, 'US', 110, 64, 'f'),
+(@Writer4, 'Writer', 'Four', '01/02/74', NULL, @Illinois, 'US', 125, 63, 'f'),
+(@Writer5, 'Writer', 'Five', '01/02/64', NULL, @Pennsylvania, 'US', 180, 68, 'm');
 
 DECLARE @JerrySeinfeldRole uniqueidentifier;
 DECLARE @ElaineBenes uniqueidentifier;
@@ -970,3 +1000,499 @@ INSERT INTO SHOW_GENRES VALUES
 (@Crime, @Sopranos),
 (@Drama, @Sopranos),
 (@Sitcom, @Cheers);
+
+DECLARE @Award1 uniqueidentifier;
+DECLARE @Award2 uniqueidentifier;
+DECLARE @Award3 uniqueidentifier;
+DECLARE @Award4 uniqueidentifier;
+DECLARE @Award5 uniqueidentifier;
+DECLARE @Award6 uniqueidentifier;
+DECLARE @Award7 uniqueidentifier;
+DECLARE @Award8 uniqueidentifier;
+DECLARE @Award9 uniqueidentifier;
+DECLARE @Award10 uniqueidentifier;
+DECLARE @Award11 uniqueidentifier;
+DECLARE @Award12 uniqueidentifier;
+DECLARE @Award13 uniqueidentifier;
+DECLARE @Award14 uniqueidentifier;
+DECLARE @Award15 uniqueidentifier;
+DECLARE @Award16 uniqueidentifier;
+DECLARE @Award17 uniqueidentifier;
+DECLARE @Award18 uniqueidentifier;
+DECLARE @Award19 uniqueidentifier;
+DECLARE @Award20 uniqueidentifier;
+
+SELECT @Award1 = NewID();
+SELECT @Award2 = NewID();
+SELECT @Award3 = NewID();
+SELECT @Award4 = NewID();
+SELECT @Award5 = NewID();
+SELECT @Award6 = NewID();
+SELECT @Award7 = NewID();
+SELECT @Award8 = NewID();
+SELECT @Award9 = NewID();
+SELECT @Award10 = NewID();
+SELECT @Award11 = NewID();
+SELECT @Award12 = NewID();
+SELECT @Award13 = NewID();
+SELECT @Award14 = NewID();
+SELECT @Award15 = NewID();
+SELECT @Award16 = NewID();
+SELECT @Award17 = NewID();
+SELECT @Award18 = NewID();
+SELECT @Award19 = NewID();
+SELECT @Award20 = NewID();
+
+INSERT INTO AWARDS VALUES
+(@Award1, 'Award 1', '05/22/1975', 'https://award1.com'),
+(@Award2, 'Award 2', '03/30/1985', 'https://award2.com'),
+(@Award3, 'Award 3', '11/20/1999', 'https://award3.com'),
+(@Award4, 'Award 4', '06/12/1991', 'https://award4.com'),
+(@Award5, 'Award 5', '02/18/1984', 'https://award5.com'),
+(@Award6, 'Award 6', '07/19/1992', 'https://award6.com'),
+(@Award7, 'Award 7', '07/24/1986', 'https://award7.com'),
+(@Award8, 'Award 8', '10/20/1974', 'https://award8.com'),
+(@Award9, 'Award 9', '12/06/1970', 'https://award9.com'),
+(@Award10, 'Award 10', '12/12/1958', 'https://award10.com'),
+(@Award11, 'Award 11', '03/12/1962', 'https://award11.com'),
+(@Award12, 'Award 12', '06/12/1979', 'https://award12.com'),
+(@Award13, 'Award 13', '09/05/1998', 'https://award13.com'),
+(@Award14, 'Award 14', '08/13/2002', 'https://award14.com'),
+(@Award15, 'Award 15', '01/29/2012', 'https://award15.com'),
+(@Award16, 'Award 16', '02/24/1984', 'https://award16.com'),
+(@Award17, 'Award 17', '11/30/1995', 'https://award17.com'),
+(@Award18, 'Award 18', '12/02/2016', 'https://award18.com'),
+(@Award19, 'Award 19', '10/14/1975', 'https://award19.com'),
+(@Award20, 'Award 20', '03/22/1992', 'https://award20.com');
+
+DECLARE @Season1 uniqueidentifier;
+DECLARE @Season2 uniqueidentifier;
+DECLARE @Season3 uniqueidentifier;
+DECLARE @Season4 uniqueidentifier;
+DECLARE @Season5 uniqueidentifier;
+DECLARE @Season6 uniqueidentifier;
+DECLARE @Season7 uniqueidentifier;
+DECLARE @Season8 uniqueidentifier;
+DECLARE @Season9 uniqueidentifier;
+DECLARE @Season10 uniqueidentifier;
+DECLARE @Season11 uniqueidentifier;
+DECLARE @Season12 uniqueidentifier;
+DECLARE @Season13 uniqueidentifier;
+DECLARE @Season14 uniqueidentifier;
+DECLARE @Season15 uniqueidentifier;
+DECLARE @Season16 uniqueidentifier;
+DECLARE @Season17 uniqueidentifier;
+DECLARE @Season18 uniqueidentifier;
+DECLARE @Season19 uniqueidentifier;
+DECLARE @Season20 uniqueidentifier;
+DECLARE @Season21 uniqueidentifier;
+DECLARE @Season22 uniqueidentifier;
+DECLARE @Season23 uniqueidentifier;
+DECLARE @Season24 uniqueidentifier;
+DECLARE @Season25 uniqueidentifier;
+DECLARE @Season26 uniqueidentifier;
+DECLARE @Season27 uniqueidentifier;
+DECLARE @Season28 uniqueidentifier;
+DECLARE @Season29 uniqueidentifier;
+DECLARE @Season30 uniqueidentifier;
+DECLARE @Season31 uniqueidentifier;
+DECLARE @Season32 uniqueidentifier;
+DECLARE @Season33 uniqueidentifier;
+DECLARE @Season34 uniqueidentifier;
+DECLARE @Season35 uniqueidentifier;
+DECLARE @Season36 uniqueidentifier;
+DECLARE @Season37 uniqueidentifier;
+DECLARE @Season38 uniqueidentifier;
+DECLARE @Season39 uniqueidentifier;
+DECLARE @Season40 uniqueidentifier;
+
+SELECT @Season1 = NewID();
+SELECT @Season2 = NewID();
+SELECT @Season3 = NewID();
+SELECT @Season4 = NewID();
+SELECT @Season5 = NewID();
+SELECT @Season6 = NewID();
+SELECT @Season7 = NewID();
+SELECT @Season8 = NewID();
+SELECT @Season9 = NewID();
+SELECT @Season10 = NewID();
+SELECT @Season11 = NewID();
+SELECT @Season12 = NewID();
+SELECT @Season13 = NewID();
+SELECT @Season14 = NewID();
+SELECT @Season15 = NewID();
+SELECT @Season16 = NewID();
+SELECT @Season17 = NewID();
+SELECT @Season18 = NewID();
+SELECT @Season19 = NewID();
+SELECT @Season20 = NewID();
+SELECT @Season21 = NewID();
+SELECT @Season22 = NewID();
+SELECT @Season23 = NewID();
+SELECT @Season24 = NewID();
+SELECT @Season25 = NewID();
+SELECT @Season26 = NewID();
+SELECT @Season27 = NewID();
+SELECT @Season28 = NewID();
+SELECT @Season29 = NewID();
+SELECT @Season30 = NewID();
+SELECT @Season31 = NewID();
+SELECT @Season32 = NewID();
+SELECT @Season33 = NewID();
+SELECT @Season34 = NewID();
+SELECT @Season35 = NewID();
+SELECT @Season36 = NewID();
+SELECT @Season37 = NewID();
+SELECT @Season38 = NewID();
+SELECT @Season39 = NewID();
+SELECT @Season40 = NewID();
+
+INSERT INTO SEASONS VALUES
+(@Season1, @Seinfeld, 1, '01/20/1994', '07/10/1994', 12, 46),
+(@Season2, @Seinfeld, 2, '01/20/1995', '07/10/1995', 12, 42),
+(@Season3, @Seinfeld, 3, '01/20/1996', '07/10/1996', 15, 25),
+(@Season4, @Frasier, 1, '01/20/1985', '07/10/1985', 16, 21),
+(@Season5, @Frasier, 2, '01/20/1986', '07/10/1986', 25, 4),
+(@Season6, @BigBangTheory, 1, '01/20/2001', '07/10/2001', 16, 25),
+(@Season7, @BigBangTheory, 2, '01/20/2002', '07/10/2002', 18, 20),
+(@Season8, @BigBangTheory, 3, '01/20/2003', '07/10/2003', 21, 4),
+(@Season9, @BigBangTheory, 4, '01/20/2004', '07/10/2004', 23, 1),
+(@Season10, @Friends, 1, '01/20/1990', '07/10/1990', 10, 68),
+(@Season11, @Friends, 2, '01/20/1991', '07/10/1991', 17, 15),
+(@Season12, @Friends, 3, '01/20/1992', '07/10/1992', 21, 3),
+(@Season13, @Friends, 4, '01/20/1993', '07/10/1993', 22, 1),
+(@Season14, @Office, 1, '01/20/2003', '07/10/2003', 16, 15),
+(@Season15, @Office, 2, '01/20/2004', '07/10/2004', 20, 4),
+(@Season16, @Office, 3, '01/20/2005', '07/10/2005', 22, 1),
+(@Season17, @FreshPrince, 1, '01/20/1988', '07/10/1988', 14, 25),
+(@Season18, @FreshPrince, 2, '01/20/1989', '07/10/1989', 17, 15),
+(@Season19, @FreshPrince, 3, '01/20/1990', '07/10/1990', 19, 7),
+(@Season20, @FreshPrince, 4, '01/20/1991', '07/10/1991', 21, 3),
+(@Season21, @GoldenGirls, 1, '01/20/1980', '07/10/1980', 22, 2),
+(@Season22, @GoldenGirls, 2, '01/20/1981', '07/10/1981', 22, 1),
+(@Season23, @Cheers, 1, '01/20/1978', '07/10/1978', 18, 20),
+(@Season24, @Cheers, 2, '01/20/1979', '07/10/1979', 21, 2),
+(@Season25, @Sopranos, 1, '01/20/2005', '07/10/2005', 18, 20),
+(@Season26, @Sopranos, 2, '01/20/2006', '07/10/2006', 20, 5),
+(@Season27, @ShowTest1, 1, '01/20/1981', '07/10/1981', NULL, NULL),
+(@Season28, @ShowTest2, 1, '01/20/1977', '07/10/1977', 8, 120),
+(@Season29, @ShowTest3, 1, '01/20/2001', '07/10/2001', NULL, NULL),
+(@Season30, @ShowTest4, 1, '01/20/2005', '07/10/2005', NULL, NULL),
+(@Season31, @ShowTest5, 1, '01/20/1966', '07/10/1966', 12, 70),
+(@Season32, @ShowTest6, 1, '01/20/2006', '07/10/2006', 11, 88),
+(@Season33, @ShowTest7, 1, '01/20/1998', '07/10/1998', NULL, NULL),
+(@Season34, @ShowTest8, 1, '01/20/1984', '07/10/1984', NULL, NULL),
+(@Season35, @ShowTest9, 1, '01/20/2009', '07/10/2009', NULL, NULL),
+(@Season36, @ShowTest10, 1, '01/20/1985', '07/10/1985', 7, 105),
+(@Season37, @ShowTest10, 2, '01/20/1986', '07/10/1986', 8, 100),
+(@Season38, @ShowTest11, 1, '01/20/2003', '07/10/2003', NULL, NULL),
+(@Season39, @ShowTest12, 1, '01/20/2016', '07/10/2016', 21, 1),
+(@Season40, @ShowTest12, 2, '01/20/2017', '07/10/2017', NULL, NULL);
+
+DECLARE @Episode1 uniqueidentifier;
+DECLARE @Episode2 uniqueidentifier;
+DECLARE @Episode3 uniqueidentifier;
+DECLARE @Episode4 uniqueidentifier;
+DECLARE @Episode5 uniqueidentifier;
+DECLARE @Episode6 uniqueidentifier;
+DECLARE @Episode7 uniqueidentifier;
+DECLARE @Episode8 uniqueidentifier;
+DECLARE @Episode9 uniqueidentifier;
+DECLARE @Episode10 uniqueidentifier;
+DECLARE @Episode11 uniqueidentifier;
+DECLARE @Episode12 uniqueidentifier;
+DECLARE @Episode13 uniqueidentifier;
+DECLARE @Episode14 uniqueidentifier;
+DECLARE @Episode15 uniqueidentifier;
+DECLARE @Episode16 uniqueidentifier;
+DECLARE @Episode17 uniqueidentifier;
+DECLARE @Episode18 uniqueidentifier;
+DECLARE @Episode19 uniqueidentifier;
+DECLARE @Episode20 uniqueidentifier;
+DECLARE @Episode21 uniqueidentifier;
+DECLARE @Episode22 uniqueidentifier;
+DECLARE @Episode23 uniqueidentifier;
+DECLARE @Episode24 uniqueidentifier;
+DECLARE @Episode25 uniqueidentifier;
+DECLARE @Episode26 uniqueidentifier;
+DECLARE @Episode27 uniqueidentifier;
+DECLARE @Episode28 uniqueidentifier;
+DECLARE @Episode29 uniqueidentifier;
+DECLARE @Episode30 uniqueidentifier;
+DECLARE @Episode31 uniqueidentifier;
+DECLARE @Episode32 uniqueidentifier;
+DECLARE @Episode33 uniqueidentifier;
+DECLARE @Episode34 uniqueidentifier;
+DECLARE @Episode35 uniqueidentifier;
+DECLARE @Episode36 uniqueidentifier;
+DECLARE @Episode37 uniqueidentifier;
+DECLARE @Episode38 uniqueidentifier;
+DECLARE @Episode39 uniqueidentifier;
+DECLARE @Episode40 uniqueidentifier;
+DECLARE @Episode41 uniqueidentifier;
+DECLARE @Episode42 uniqueidentifier;
+DECLARE @Episode43 uniqueidentifier;
+DECLARE @Episode44 uniqueidentifier;
+DECLARE @Episode45 uniqueidentifier;
+DECLARE @Episode46 uniqueidentifier;
+DECLARE @Episode47 uniqueidentifier;
+DECLARE @Episode48 uniqueidentifier;
+DECLARE @Episode49 uniqueidentifier;
+DECLARE @Episode50 uniqueidentifier;
+DECLARE @Episode51 uniqueidentifier;
+DECLARE @Episode52 uniqueidentifier;
+DECLARE @Episode53 uniqueidentifier;
+
+SELECT @Episode1 = NewID();
+SELECT @Episode2 = NewID();
+SELECT @Episode3 = NewID();
+SELECT @Episode4 = NewID();
+SELECT @Episode5 = NewID();
+SELECT @Episode6 = NewID();
+SELECT @Episode7 = NewID();
+SELECT @Episode8 = NewID();
+SELECT @Episode9 = NewID();
+SELECT @Episode10 = NewID();
+SELECT @Episode11 = NewID();
+SELECT @Episode12 = NewID();
+SELECT @Episode13 = NewID();
+SELECT @Episode14 = NewID();
+SELECT @Episode15 = NewID();
+SELECT @Episode16 = NewID();
+SELECT @Episode17 = NewID();
+SELECT @Episode18 = NewID();
+SELECT @Episode19 = NewID();
+SELECT @Episode20 = NewID();
+SELECT @Episode21 = NewID();
+SELECT @Episode22 = NewID();
+SELECT @Episode23 = NewID();
+SELECT @Episode24 = NewID();
+SELECT @Episode25 = NewID();
+SELECT @Episode26 = NewID();
+SELECT @Episode27 = NewID();
+SELECT @Episode28 = NewID();
+SELECT @Episode29 = NewID();
+SELECT @Episode30 = NewID();
+SELECT @Episode31 = NewID();
+SELECT @Episode32 = NewID();
+SELECT @Episode33 = NewID();
+SELECT @Episode34 = NewID();
+SELECT @Episode35 = NewID();
+SELECT @Episode36 = NewID();
+SELECT @Episode37 = NewID();
+SELECT @Episode38 = NewID();
+SELECT @Episode39 = NewID();
+SELECT @Episode40 = NewID();
+SELECT @Episode41 = NewID();
+SELECT @Episode42 = NewID();
+SELECT @Episode43 = NewID();
+SELECT @Episode44 = NewID();
+SELECT @Episode45 = NewID();
+SELECT @Episode46 = NewID();
+SELECT @Episode47 = NewID();
+SELECT @Episode48 = NewID();
+SELECT @Episode49 = NewID();
+SELECT @Episode50 = NewID();
+SELECT @Episode51 = NewID();
+SELECT @Episode52 = NewID();
+SELECT @Episode53 = NewID();
+
+INSERT INTO EPISODES VALUES
+(@Episode1, @Season1, 1, 'Episode Title 1', @Director1, '01/02/1980', 22),
+(@Episode2, @Season1, 2, 'Episode Title 2', @Director2, '01/02/1988', 23),
+(@Episode3, @Season2, 1, 'Episode Title 3', @Director2, '01/02/1989', 24),
+(@Episode4, @Season2, 2, 'Episode Title 4', @Director3, '01/02/1990', 29),
+(@Episode5, @Season2, 3, 'Episode Title 5', @Director3, '01/02/1991', 29),
+(@Episode6, @Season2, 4, 'Episode Title 6', @Director2, '01/02/1985', 26),
+(@Episode7, @Season3, 1, 'Episode Title 7', @Director1, '01/02/1984', 26),
+(@Episode8, @Season3, 2, 'Episode Title 8', @Director1, '01/02/1982', 28),
+(@Episode9, @Season4, 1, 'Episode Title 9', @Director3, '01/02/1983', 30),
+(@Episode10, @Season4, 2, 'Episode Title 10', @Director5, '01/02/1999', 31),
+(@Episode11, @Season5, 1, 'Episode Title 11', @Director5, '01/02/1991', 29),
+(@Episode12, @Season6, 1, 'Episode Title 12', @Director1, '01/02/1991', 29),
+(@Episode13, @Season6, 2, 'Episode Title 13', @Director4, '01/02/1999', 28),
+(@Episode14, @Season6, 3, 'Episode Title 14', @Director3, '01/02/1981', 27),
+(@Episode15, @Season6, 4, 'Episode Title 15', @Director2, '01/02/1985', 27),
+(@Episode16, @Season7, 1, 'Episode Title 16', @Director2, '01/02/1984', 27),
+(@Episode17, @Season7, 2, 'Episode Title 17', @Director1, '01/02/1987', 26),
+(@Episode18, @Season7, 3, 'Episode Title 18', @Director5, '01/02/1990', 23),
+(@Episode19, @Season8, 1, 'Episode Title 19', @Director5, '01/02/1988', 23),
+(@Episode20, @Season8, 2, 'Episode Title 20', @Director4, '01/02/1994', 22),
+(@Episode21, @Season9, 1, 'Episode Title 21', @Director2, '01/02/1992', 22),
+(@Episode22, @Season10, 1, 'Episode Title 22', @Director2, '01/02/1989', 26),
+(@Episode23, @Season10, 2, 'Episode Title 23', @Director1, '01/02/1986', 24),
+(@Episode24, @Season11, 1, 'Episode Title 24', @Director1, '01/02/1982', 22),
+(@Episode25, @Season12, 1, 'Episode Title 25', @Director1, '01/02/1982', 23),
+(@Episode26, @Season13, 1, 'Episode Title 26', @Director3, '01/02/1984', 23),
+(@Episode27, @Season14, 1, 'Episode Title 27', @Director3, '01/02/1987', 20),
+(@Episode28, @Season15, 1, 'Episode Title 28', @Director3, '01/02/1993', 21),
+(@Episode29, @Season16, 1, 'Episode Title 29', @Director2, '01/02/1999', 21),
+(@Episode30, @Season17, 1, 'Episode Title 30', @Director5, '01/02/1994', 22),
+(@Episode31, @Season18, 1, 'Episode Title 31', @Director2, '01/02/2001', 29),
+(@Episode32, @Season19, 1, 'Episode Title 32', @Director1, '01/02/2005', 29),
+(@Episode33, @Season20, 1, 'Episode Title 33', @Director2, '01/02/1992', 27),
+(@Episode34, @Season21, 1, 'Episode Title 34', @Director1, '01/02/1993', 27),
+(@Episode35, @Season22, 1, 'Episode Title 35', @Director5, '01/02/1994', 26),
+(@Episode36, @Season23, 1, 'Episode Title 36', @Director3, '01/02/2002', 31),
+(@Episode37, @Season24, 1, 'Episode Title 37', @Director4, '01/02/1997', 32),
+(@Episode38, @Season25, 1, 'Episode Title 38', @Director1, '01/02/1998', 30),
+(@Episode39, @Season26, 1, 'Episode Title 39', @Director5, '01/02/1982', 26),
+(@Episode40, @Season27, 1, 'Episode Title 40', @Director4, '01/02/2010', 26),
+(@Episode41, @Season28, 1, 'Episode Title 41', @Director5, '01/02/2012', 25),
+(@Episode42, @Season29, 1, 'Episode Title 42', @Director5, '01/02/2015', 25),
+(@Episode43, @Season30, 1, 'Episode Title 43', @Director3, '01/02/1983', 22),
+(@Episode44, @Season31, 1, 'Episode Title 44', @Director1, '01/02/1988', 22),
+(@Episode45, @Season32, 1, 'Episode Title 45', @Director2, '01/02/1998', 29),
+(@Episode46, @Season33, 1, 'Episode Title 46', @Director5, '01/02/2006', 28),
+(@Episode47, @Season34, 1, 'Episode Title 47', @Director5, '01/02/1995', 28),
+(@Episode48, @Season35, 1, 'Episode Title 48', @Director2, '01/02/1999', 27),
+(@Episode49, @Season36, 1, 'Episode Title 49', @Director5, '01/02/1986', 30),
+(@Episode50, @Season37, 1, 'Episode Title 50', @Director4, '01/02/1982', 30),
+(@Episode51, @Season38, 1, 'Episode Title 51', @Director5, '01/02/1983', 21),
+(@Episode52, @Season39, 1, 'Episode Title 52', @Director3, '01/02/1984', 21),
+(@Episode53, @Season40, 1, 'Episode Title 53', @Director5, '01/02/1985', 22);
+
+DECLARE @AwardCategory1 uniqueidentifier;
+DECLARE @AwardCategory2 uniqueidentifier;
+DECLARE @AwardCategory3 uniqueidentifier;
+DECLARE @AwardCategory4 uniqueidentifier;
+DECLARE @AwardCategory5 uniqueidentifier;
+DECLARE @AwardCategory6 uniqueidentifier;
+DECLARE @AwardCategory7 uniqueidentifier;
+DECLARE @AwardCategory8 uniqueidentifier;
+DECLARE @AwardCategory9 uniqueidentifier;
+DECLARE @AwardCategory10 uniqueidentifier;
+DECLARE @AwardCategory11 uniqueidentifier;
+DECLARE @AwardCategory12 uniqueidentifier;
+DECLARE @AwardCategory13 uniqueidentifier;
+DECLARE @AwardCategory14 uniqueidentifier;
+DECLARE @AwardCategory15 uniqueidentifier;
+DECLARE @AwardCategory16 uniqueidentifier;
+DECLARE @AwardCategory17 uniqueidentifier;
+DECLARE @AwardCategory18 uniqueidentifier;
+DECLARE @AwardCategory19 uniqueidentifier;
+DECLARE @AwardCategory20 uniqueidentifier;
+DECLARE @AwardCategory21 uniqueidentifier;
+DECLARE @AwardCategory22 uniqueidentifier;
+DECLARE @AwardCategory23 uniqueidentifier;
+DECLARE @AwardCategory24 uniqueidentifier;
+DECLARE @AwardCategory25 uniqueidentifier;
+DECLARE @AwardCategory26 uniqueidentifier;
+DECLARE @AwardCategory27 uniqueidentifier;
+DECLARE @AwardCategory28 uniqueidentifier;
+DECLARE @AwardCategory29 uniqueidentifier;
+DECLARE @AwardCategory30 uniqueidentifier;
+
+SELECT @AwardCategory1 = NewID();
+SELECT @AwardCategory2 = NewID();
+SELECT @AwardCategory3 = NewID();
+SELECT @AwardCategory4 = NewID();
+SELECT @AwardCategory5 = NewID();
+SELECT @AwardCategory6 = NewID();
+SELECT @AwardCategory7 = NewID();
+SELECT @AwardCategory8 = NewID();
+SELECT @AwardCategory9 = NewID();
+SELECT @AwardCategory10 = NewID();
+SELECT @AwardCategory11 = NewID();
+SELECT @AwardCategory12 = NewID();
+SELECT @AwardCategory13 = NewID();
+SELECT @AwardCategory14 = NewID();
+SELECT @AwardCategory15 = NewID();
+SELECT @AwardCategory16 = NewID();
+SELECT @AwardCategory17 = NewID();
+SELECT @AwardCategory18 = NewID();
+SELECT @AwardCategory19 = NewID();
+SELECT @AwardCategory20 = NewID();
+SELECT @AwardCategory21 = NewID();
+SELECT @AwardCategory22 = NewID();
+SELECT @AwardCategory23 = NewID();
+SELECT @AwardCategory24 = NewID();
+SELECT @AwardCategory25 = NewID();
+SELECT @AwardCategory26 = NewID();
+SELECT @AwardCategory27 = NewID();
+SELECT @AwardCategory28 = NewID();
+SELECT @AwardCategory29 = NewID();
+SELECT @AwardCategory30 = NewID();
+
+INSERT INTO AWARD_CATEGORIES VALUES
+(@AwardCategory1, 'Best Comedy', @Award1),
+(@AwardCategory2, 'Best Drama', @Award1),
+(@AwardCategory3, 'Best Comedy', @Award2),
+(@AwardCategory4, 'Best Lead Actor in Comedy', @Award2),
+(@AwardCategory5, 'Best Lead Actor in Drama', @Award3),
+(@AwardCategory6, 'Best Drama', @Award4),
+(@AwardCategory7, 'Best Director in Comedy', @Award4),
+(@AwardCategory8, 'Best Comedy', @Award5),
+(@AwardCategory9, 'Best Director in Comedy', @Award6),
+(@AwardCategory10, 'Best Drama', @Award6),
+(@AwardCategory11, 'Best Lead Actor in Comedy', @Award7),
+(@AwardCategory12, 'Best Drama', @Award8),
+(@AwardCategory13, 'Best Director in Comedy', @Award9),
+(@AwardCategory14, 'Best Comedy', @Award10),
+(@AwardCategory15, 'Best Supporting Actor in Comedy', @Award11),
+(@AwardCategory16, 'Best Lead Actor in Comedy', @Award11),
+(@AwardCategory17, 'Best Comedy', @Award11),
+(@AwardCategory18, 'Best Drama', @Award12),
+(@AwardCategory19, 'Best Supporting Actor in Comedy', @Award13),
+(@AwardCategory20, 'Best Lead Actor in Comedy', @Award14),
+(@AwardCategory21, 'Best Supporting Actor in Comedy', @Award14),
+(@AwardCategory22, 'Best Supporting Actor in Drama', @Award15),
+(@AwardCategory23, 'Best Comedy', @Award15),
+(@AwardCategory24, 'Best Supporting Actor in Comedy', @Award16),
+(@AwardCategory25, 'Best Supporting Actor in Drama', @Award16),
+(@AwardCategory26, 'Best Comedy', @Award17),
+(@AwardCategory27, 'Best Writer in Comedy', @Award18),
+(@AwardCategory28, 'Best Writer in Drama', @Award19),
+(@AwardCategory29, 'Best Writer in Comedy', @Award20),
+(@AwardCategory30, 'Best Drama', @Award20);
+
+INSERT INTO AWARD_CATEGORY_RESULTS VALUES
+(@AwardCategory1, @Seinfeld, NULL, 1, '01/15/1990'),
+(@AwardCategory1, @Frasier, NULL, 0, '01/15/1990'),
+(@AwardCategory1, @ShowTest1, NULL, 0, '01/15/1990'),
+(@AwardCategory1, @ShowTest4, NULL, 0, '01/15/1990'),
+(@AwardCategory2, @Sopranos, NULL, 0, '01/15/1990'),
+(@AwardCategory2, @ShowTest2, NULL, 0, '01/15/1990'),
+(@AwardCategory2, @ShowTest6, NULL, 0, '01/15/1990'),
+(@AwardCategory2, @ShowTest7, NULL, 0, '01/15/1990'),
+(@AwardCategory3, @BigBangTheory, NULL, 0, '01/15/1990'),
+(@AwardCategory3, @Office, NULL, 1, '01/15/1990'),
+(@AwardCategory3, @ShowTest3, NULL, 0, '01/15/1990'),
+(@AwardCategory4, @Seinfeld, @JerrySeinfeld, 1, '01/15/1990'),
+(@AwardCategory4, @Frasier, NULL, 0, '01/15/1990'),
+(@AwardCategory4, @Friends, NULL, 0, '01/15/1990'),
+(@AwardCategory5, @Sopranos, @JamesGandolfini, 1, '01/15/1990'),
+(@AwardCategory5, @ShowTest2, NULL, 0, '01/15/1990'),
+(@AwardCategory6, @ShowTest11, NULL, 1, '01/15/1990'),
+(@AwardCategory6, @ShowTest2, NULL, 0, '01/15/1990'),
+(@AwardCategory6, @ShowTest5, NULL, 0, '01/15/1990'),
+(@AwardCategory6, @ShowTest7, NULL, 0, '01/15/1990'),
+(@AwardCategory7, @Frasier, @Director1, 1, '01/15/1990'),
+(@AwardCategory7, @Seinfeld, NULL, 0, '01/15/1990'),
+(@AwardCategory8, @ShowTest2, NULL, 1, '01/15/1990'),
+(@AwardCategory9, @Seinfeld, @Director2, 0, '01/15/1990'),
+(@AwardCategory10, @ShowTest1, NULL, 1, '01/15/1990'),
+(@AwardCategory10, @ShowTest2, NULL, 0, '01/15/1990'),
+(@AwardCategory10, @ShowTest3, NULL, 0, '01/15/1990'),
+(@AwardCategory11, @Frasier, @KelseyGrammer, 1, '01/15/1990'),
+(@AwardCategory12, @ShowTest10, NULL, 0, '01/15/1990'),
+(@AwardCategory13, @FreshPrince, @Director4, 1, '01/15/1990'),
+(@AwardCategory14, @FreshPrince, NULL, 0, '01/15/1990'),
+(@AwardCategory15, @GoldenGirls, @BettyWhite, 0, '01/15/1990'),
+(@AwardCategory16, @Office, @SteveCarell, 0, '01/15/1990'),
+(@AwardCategory17, @ShowTest6, NULL, 0, '01/15/1990'),
+(@AwardCategory18, @ShowTest2, NULL, 0, '01/15/1990'),
+(@AwardCategory19, @Office, @JennaFischer, 0, '01/15/1990'),
+(@AwardCategory20, @Cheers, @TedDanson, 0, '01/15/1990'),
+(@AwardCategory21, @Seinfeld, @JuliaLouisDreyfus, 0, '01/15/1990'),
+(@AwardCategory22, @Sopranos, @LorraineBraco, 0, '01/15/1990'),
+(@AwardCategory23, @ShowTest4, NULL, 0, '01/15/1990'),
+(@AwardCategory24, @Seinfeld, @JasonAlexander, 0, '01/15/1990'),
+(@AwardCategory25, @Sopranos, @JamesGandolfini, 0, '01/15/1990'),
+(@AwardCategory26, @ShowTest8, NULL, 0, '01/15/1990'),
+(@AwardCategory27, @ShowTest6, @Writer1, 1, '01/15/1990'),
+(@AwardCategory28, @ShowTest3, @Writer3, 1, '01/15/1990'),
+(@AwardCategory29, @ShowTest10, @Writer4, 1, '01/15/1990'),
+(@AwardCategory30, @ShowTest12, NULL, 0, '01/15/1990');
+
+
