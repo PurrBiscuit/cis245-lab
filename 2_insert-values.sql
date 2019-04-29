@@ -682,11 +682,11 @@ INSERT INTO PEOPLE VALUES
 (@Director3, 'Director', 'Three', '01/02/1975', NULL, @California, 'US', 115, 65, 'f'),
 (@Director4, 'Director', 'Four', '01/02/1958', NULL, @NewYork, 'US', 210, 68, 'm'),
 (@Director5, 'Director', 'Five', '01/02/1935', '10/15/2018', @Oklahoma, 'US', 180, 68, 'm'),
-(@Writer1, 'Writer', 'One', '01/02/59', NULL, @NewYork, 'US', 190, 69, 'm'),
-(@Writer2, 'Writer', 'Two', '01/02/24', '11/25/1994', @NewYork, 'US', 135, 70, 'f'),
-(@Writer3, 'Writer', 'Three', '01/02/81', NULL, @NewJersey, 'US', 110, 64, 'f'),
-(@Writer4, 'Writer', 'Four', '01/02/74', NULL, @Illinois, 'US', 125, 63, 'f'),
-(@Writer5, 'Writer', 'Five', '01/02/64', NULL, @Pennsylvania, 'US', 180, 68, 'm');
+(@Writer1, 'Writer', 'One', '01/02/1959', NULL, @NewYork, 'US', 190, 69, 'm'),
+(@Writer2, 'Writer', 'Two', '01/02/1924', '11/25/1994', @NewYork, 'US', 135, 70, 'f'),
+(@Writer3, 'Writer', 'Three', '01/02/1981', NULL, @NewJersey, 'US', 110, 64, 'f'),
+(@Writer4, 'Writer', 'Four', '01/02/1974', NULL, @Illinois, 'US', 125, 63, 'f'),
+(@Writer5, 'Writer', 'Five', '01/02/1964', NULL, @Pennsylvania, 'US', 180, 68, 'm');
 
 DECLARE @JerrySeinfeldRole uniqueidentifier;
 DECLARE @ElaineBenes uniqueidentifier;
