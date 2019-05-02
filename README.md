@@ -10,3 +10,7 @@ Run in the following order:
 3.) 3_create_views.sql - This file will create the views necessary to query the database and produce reports.
 
 4.) 4_run_views.sql - This file will run the select statements on the views that were created in the previous step.
+
+5.) 5_create_stored_procedures.sql - This file will create the stored procedures that can be used to produce report tables, check data integrity via foreign key constraints, and remove or update parent table ids.
+
+6.) 6_run_stored_procedures.sql - This file will run the stored procedures that were created in the previous step.
